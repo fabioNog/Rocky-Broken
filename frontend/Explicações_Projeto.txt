@@ -1,0 +1,50 @@
+Este projeto foi desenvolvido a partir de um curso feito em react do professor Leonardo Leitão, ao qual se preocupa na prototipação de um todo list.
+Ele foi construido com Javascript,React, Redux, NodeJS, MongoDB, o Framework AntDesigned.
+Este repositório se encontra no meu github.
+
+O Projeto me trouxe o prazer em desenvolver novamente em react, uma biblioteca ao qual tenho muito carinho e respeito,
+Foram muitos conflitos, pois a minha maquina notebook que continha o sistema operacional Linux, foi pro espaço junto com o seu hd,
+me obrigado a utilizar um sistema operacional windons 7 emprestado da minha mãe. (hahaha)
+
+Pra desenvolver o projeto instalei o NodeJS em minha maquina para servir como o servidor local,
+Instalei o mongodb para que se comportasse como meu banco de dados local também.
+
+Após fazer o boostratp da aplicação, fiz dowload do arquivo json broken-database.json enviado pela equipe Rocky.
+
+para tanto utilizei mongoimport do mongodb para persistir em meu banco local.
+utilizando o comando mongoimport -h localhost:27017 --d broken --c products --file JSON jsonArray.
+mongoimport serviu para importar para meu banco local
+-h é onde estava rodando meu host que no caso era 127.0.0.1
+nomiei meu database de broken
+nomiei minha collection com products
+--fille difiniu o tipo de arquivo que no caso é um json.
+
+Para utilizar o codigo fonte zipado voce deverá devera navegar tanto para a pasta 
+backend e também para a pasta frontend, aconselho abrir dois terminais para tal fim 
+e após estar nos diretorios gerar os modulos com o comando (npm install)
+após gerar os modulos dos dois diretorios, nescessitára de rodar o bundle com os comandos
+(npm run serve), assim conseguirá levantar tanto o servidor do backendo como o bundle do frontend.
+Após isto, é so utilizar um navegador quaqlquer(Chrome) e navegar com localhost:8080
+
+FRONTEND
+Tudo se inicia pelo html, onde no mesmo que estara rondado o script "app.js"
+este javascript é entendido pelo browser graças a webpack construido e onde também se comunica a css,
+partindo do index.jsx que se encontra na pasta src, esta uma componente de rota embebido pelo redux,
+o mesmo contém um storie que controla os estados da aplicação seja ela em mudar de aba ou até mesmo renderizar as listas,
+
+BACKEND
+Tudo se inicia no arquivo loarder onde o mesmo possui o servidor que se comunica
+a com o frontend o datababse para fazer a comunicação com o banco de dado broken e as rotas de comunicação
+
+Criei uma model de referencia para o banco dados no intuito de persistir os dados que foram modificados pelo serviço do productsService,
+a minha ideia era através de recurso, pegar os dados do banco existente modifica-los e depois criar um novo com estes dados modificados, infelizmente não consegui esta parte,
+conseguir criar funções para listar o banco em ordem crescente partindo da categoria e do Id estas funções serão encontradas no arquivo productsService
+tabém criei uma função que conta a quantidade de produtos no estoque e também soma todos os preços e no final realizo a subtração,
+entendo que esteja errado o calculo, fazia muito tempo que não trabalha com o mongo e perdi muito tempo tentando entender como funciona o aggregate do mongo,
+infelizmente não conseguirei hoje entregar tudo que foi pedido, mais fico muito feliz, com o tempo gasto para participar deste processo seletivo,
+espero que possam me dar uma chance de provar mais meus conhecimento em javascript, eu amo o que faço.
+Um grande abraço.
+
+"A alegria está na luta, na tentativa, no sofrimento envolvido e não na vitória propriamente dita."
+
+Mahatma Gandhi
